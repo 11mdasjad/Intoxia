@@ -1,5 +1,5 @@
 # ==========================================
-# Stage 1: Build Frontend Assets (Vite)
+# Stage 1: Build Frontend Assets (Vite & Tailwind v4)
 # ==========================================
 FROM node:22-alpine AS frontend
 WORKDIR /app
@@ -9,6 +9,7 @@ RUN npm ci
 
 COPY vite.config.js ./
 COPY resources/ ./resources/
+COPY app/ ./app/
 COPY public/ ./public/
 
 RUN npm run build
@@ -60,8 +61,8 @@ RUN cp "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini" \
 # Copy application source code
 COPY . .
 
-# Copy compiled frontend assets from Stage 1
-COPY --from=frontend /app/public/build ./public/build
+# Copy compiled frontend assets from Stage 1 into public/build
+COPY --from=frontend /app/public/build /var/www/html/public/build
 
 # Install PHP dependencies without dev packages
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -74,8 +75,8 @@ COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Set directory permissions for web server user
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database /var/www/html/public \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database /var/www/html/public
 
 # Expose Render default container port
 EXPOSE 8080 10000
