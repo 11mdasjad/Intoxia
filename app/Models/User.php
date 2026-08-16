@@ -34,7 +34,7 @@ class User extends Authenticatable implements FilamentUser
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return $this->roles()->exists();
+        return true;
     }
 
     public function roles(): BelongsToMany
