@@ -1,58 +1,138 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Intoxia Technologies — Corporate Platform & CMS
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="public/images/logo.svg" width="120" height="120" alt="Intoxia Technologies Logo">
 </p>
 
-## About Laravel
+<p align="center">
+  <strong>Enterprise IT, AI Autonomous Systems & Digital Transformation Platform</strong><br>
+  Engineered with Laravel 13, Filament 4, Tailwind CSS, and Alpine.js.
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  <a href="https://www.intoxiatechnologies.com">Website</a> •
+  <a href="mailto:contact@intoxiatechnologies.com">Email</a> •
+  <a href="tel:+917011639618">Hotline: +91 70116 39618</a>
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Overview
 
-## Learning Laravel
+Intoxia Technologies is a modern technology and digital transformation company based in New Delhi / NCR, India. This platform serves as the corporate digital hub featuring:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **14-Section Dynamic Homepage** with 3D Holographic Visuals & Interactive AI Core Showcase.
+- **Complete CMS & Admin Portal** powered by **Filament 4** at `/admin`.
+- **15+ Core & AI Services Directory** with deep architectural breakdowns.
+- **12 Industry Frameworks** with domain problem-solution matrices.
+- **Selected Work & Deep Case Studies** with topic-specific high-resolution product UI mockups.
+- **Dynamic Technology Stack Ecosystem** featuring official vector SVG brand logos.
+- **Transparent Pricing & Engagement Models** (`/pricing`) with dual-currency switcher (INR ₹ / USD $) and an interactive scope cost estimator.
+- **Lead Capture CRM** with CSRF protection, anti-spam honeypot, rate limiting, and automated transactional emails.
+- **Dynamic XML Sitemap (`/sitemap.xml`)** and JSON-LD Organization Schema for SEO.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🛠️ Tech Stack
 
-## Agentic Development
+| Layer | Technology |
+| :--- | :--- |
+| **Backend Framework** | Laravel 13.25.0 (PHP 8.3 / 8.5) |
+| **Admin Panel / CMS** | Filament 4.0 |
+| **Styling & Design System** | Tailwind CSS v4 + Custom Modern Tokens |
+| **Interactivity** | Alpine.js 3.16.1 |
+| **Build Tooling** | Vite 8.2 |
+| **Testing** | PHPUnit 12 (14 Feature Tests / 48 Assertions - 100% Passing) |
+| **Deployment** | Vercel Serverless Ready (`vercel.json`) & Standard LAMP/LEMP Docker |
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+---
 
+## ⚡ Quick Start (Local Development)
+
+### 1. Clone & Install
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/11mdasjad/Intoxia.git
+cd Intoxia
 
-php artisan boost:install
+# Install PHP dependencies
+composer install
+
+# Install Node dependencies
+npm install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Environment Setup
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-## Contributing
+### 3. Database & Seeders
+```bash
+# Run migrations and seed complete realistic enterprise data
+php artisan migrate --seed
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4. Build Assets & Run
+```bash
+# Terminal 1: Vite asset compilation
+npm run dev
 
-## Code of Conduct
+# Terminal 2: Laravel server
+php artisan serve
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Access the platform at:
+- **Public Portal**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- **Admin CRM Panel**: [http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🔐 Default Admin Credentials
 
-## License
+| Field | Primary Super Admin |
+| :--- | :--- |
+| **URL** | `/admin/login` |
+| **Email** | `admin@intoxiatechnologies.com` |
+| **Password** | `password` |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+*(Alternative test admin: `admin@intoxia.com` / `admin123`)*
+
+---
+
+## ☁️ Vercel Deployment
+
+This repository includes native Vercel serverless configuration (`vercel.json` and `api/index.php`).
+
+### Required Environment Variables on Vercel:
+- `APP_NAME` = `Intoxia Technologies`
+- `APP_ENV` = `production`
+- `APP_KEY` = `base64:...` *(Run `php artisan key:generate --show` to get your key)*
+- `APP_DEBUG` = `false`
+- `APP_URL` = `https://your-domain.vercel.app`
+
+---
+
+## 🧪 Automated Testing
+
+```bash
+php artisan test
+```
+```
+Tests:    14 passed (48 assertions)
+Duration: 1.2s
+```
+
+---
+
+## 📍 Corporate Contact Details
+
+- **Company**: Intoxia Technologies Private Limited
+- **Development Center**: 226 Second Floor, Main Kalindi Kunj Road, Jasola, New Delhi-110025, India
+- **Phone / WhatsApp**: +91 70116 39618
+- **Email**: contact@intoxiatechnologies.com
+- **Website**: [https://www.intoxiatechnologies.com](https://www.intoxiatechnologies.com)
+
+---
+
+&copy; 2026 Intoxia Technologies Private Limited. All rights reserved.
