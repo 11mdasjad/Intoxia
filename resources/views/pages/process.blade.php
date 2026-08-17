@@ -5,7 +5,7 @@
     {{-- Header --}}
     <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl mx-auto">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono uppercase tracking-widest font-semibold mb-4">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono uppercase tracking-widest font-bold mb-4 shadow-sm">
                 Disciplined Execution
             </div>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -81,10 +81,10 @@
         @endphp
 
         @foreach($steps as $step)
-            <div class="glass-panel rounded-3xl p-8 sm:p-10 border border-slate-200 relative overflow-hidden">
+            <div class="glass-panel rounded-3xl p-8 sm:p-10 border border-slate-200 relative overflow-hidden shadow-sm">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6 mb-6">
                     <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center font-mono font-extrabold text-lg text-cyan-300">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center font-mono font-extrabold text-lg text-blue-700 shadow-sm">
                             {{ $step['num'] }}
                         </div>
                         <h2 class="text-2xl font-extrabold text-slate-900">{{ $step['title'] }}</h2>
@@ -93,19 +93,19 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
                     <div>
-                        <strong class="text-xs font-mono uppercase tracking-wider text-cyan-400 block mb-1">Objective:</strong>
+                        <strong class="text-xs font-mono uppercase tracking-wider text-blue-700 block mb-1">Objective:</strong>
                         <p class="text-slate-700">{{ $step['objective'] }}</p>
                     </div>
                     <div>
-                        <strong class="text-xs font-mono uppercase tracking-wider text-blue-400 block mb-1">Key Deliverables:</strong>
+                        <strong class="text-xs font-mono uppercase tracking-wider text-blue-700 block mb-1">Key Deliverables:</strong>
                         <p class="text-slate-700">{{ $step['deliverables'] }}</p>
                     </div>
                     <div>
-                        <strong class="text-xs font-mono uppercase tracking-wider text-indigo-400 block mb-1">Client Involvement:</strong>
+                        <strong class="text-xs font-mono uppercase tracking-wider text-blue-700 block mb-1">Client Involvement:</strong>
                         <p class="text-slate-700">{{ $step['client'] }}</p>
                     </div>
                     <div>
-                        <strong class="text-xs font-mono uppercase tracking-wider text-emerald-400 block mb-1">Expected Outcome:</strong>
+                        <strong class="text-xs font-mono uppercase tracking-wider text-emerald-700 block mb-1">Expected Outcome:</strong>
                         <p class="text-slate-700">{{ $step['outcome'] }}</p>
                     </div>
                 </div>

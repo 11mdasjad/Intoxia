@@ -7,7 +7,7 @@
     <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
-                <a href="{{ route('industries.index') }}" class="text-xs font-mono text-cyan-400 hover:text-slate-900 inline-flex items-center space-x-1 mb-4">
+                <a href="{{ route('industries.index') }}" class="text-xs font-mono text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center space-x-1 mb-4">
                     <span>← All Industries</span>
                 </a>
 
@@ -35,8 +35,8 @@
             <div class="lg:col-span-8 space-y-12">
                 {{-- Problem Statement --}}
                 @if($industry->problem)
-                    <div class="p-8 rounded-3xl bg-red-950/20 border border-red-500/20">
-                        <div class="text-xs font-mono text-red-400 uppercase tracking-widest font-bold mb-2">Industry Bottlenecks & Challenges</div>
+                    <div class="p-8 rounded-3xl bg-rose-50/70 border border-rose-200">
+                        <div class="text-xs font-mono text-rose-700 uppercase tracking-widest font-bold mb-2">Industry Bottlenecks & Challenges</div>
                         <h2 class="text-2xl font-bold text-slate-900 mb-3">The Problem</h2>
                         <p class="text-slate-700 text-base leading-relaxed">
                             {{ $industry->problem }}
@@ -61,8 +61,8 @@
                         <h3 class="text-2xl font-bold text-slate-900 mb-6">Custom Systems We Build for {{ $industry->name }}</h3>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             @foreach($industry->potential_products as $product)
-                                <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3">
-                                    <div class="w-2 h-2 rounded-full bg-cyan-400"></div>
+                                <div class="p-5 rounded-2xl bg-white border border-slate-200 flex items-center space-x-3 shadow-sm">
+                                    <div class="w-2 h-2 rounded-full bg-blue-600"></div>
                                     <span class="text-sm font-semibold text-slate-900">{{ $product }}</span>
                                 </div>
                             @endforeach
@@ -92,7 +92,7 @@
                         <h3 class="text-sm font-mono uppercase tracking-widest text-slate-600 font-bold">Other Industries</h3>
                         <div class="space-y-3">
                             @foreach($otherIndustries as $other)
-                                <a href="{{ route('industries.show', $other->slug) }}" class="block p-3 rounded-xl bg-white hover:bg-slate-50 text-sm font-semibold text-slate-900 hover:text-cyan-400 transition-colors">
+                                <a href="{{ route('industries.show', $other->slug) }}" class="block p-3 rounded-xl bg-white hover:bg-slate-50 text-sm font-semibold text-slate-900 hover:text-blue-600 transition-colors">
                                     {{ $other->name }} →
                                 </a>
                             @endforeach

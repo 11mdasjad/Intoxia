@@ -365,13 +365,13 @@
                 @foreach($industries as $industry)
                     <div class="light-glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group">
                         <div>
-                            <div class="w-12 h-12 rounded-2xl bg-cyan-50 border border-cyan-200 flex items-center justify-center text-cyan-600 mb-6 group-hover:bg-cyan-600 group-hover:text-white transition-all duration-300">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
                                 <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
                                 </svg>
                             </div>
 
-                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-cyan-600 transition-colors tracking-tight font-['Outfit']">
+                            <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight font-['Outfit']">
                                 {{ $industry->name }}
                             </h3>
 
@@ -381,7 +381,7 @@
                         </div>
 
                         <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
-                            <a href="{{ route('industries.show', $industry->slug) }}" class="text-xs font-mono font-bold text-cyan-600 hover:text-cyan-700 inline-flex items-center space-x-1 transition-colors">
+                            <a href="{{ route('industries.show', $industry->slug) }}" class="text-xs font-mono font-bold text-blue-600 hover:text-blue-700 inline-flex items-center space-x-1 transition-colors">
                                 <span>Industry Framework</span>
                                 <svg class="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
@@ -418,7 +418,7 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
-                <div class="text-xs font-mono text-cyan-600 font-bold tracking-widest uppercase">02 — Modern Clean Engineering</div>
+                <div class="text-xs font-mono text-blue-600 font-bold tracking-widest uppercase">02 — Modern Clean Engineering</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Maintainable, clean architecture</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     We adhere to SOLID principles, strict typing, automated test coverage, and modular codebases so your team can easily extend the project.

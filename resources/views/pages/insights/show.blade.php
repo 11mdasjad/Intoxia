@@ -28,14 +28,14 @@
     {{-- Hero Section --}}
     <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <a href="{{ route('insights.index') }}" class="text-xs font-mono text-blue-400 hover:text-cyan-300 inline-flex items-center space-x-1 mb-6">
+            <a href="{{ route('insights.index') }}" class="text-xs font-mono text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center space-x-1 mb-6">
                 <span>← All Insights</span>
             </a>
 
-            @if($post->category)
+            @if($post->is_featured)
                 <div class="mb-4">
-                    <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-blue-600/20 text-cyan-400 border border-blue-500/30">
-                        {{ $post->category->name }}
+                    <span class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200 shadow-sm">
+                        FEATURED ARTICLE
                     </span>
                 </div>
             @endif
@@ -79,7 +79,7 @@
 
         {{-- Author Bio Card --}}
         <div class="mt-12 p-8 rounded-3xl bg-white border border-slate-200 flex items-center space-x-6">
-            <div class="w-14 h-14 rounded-2xl bg-blue-600/20 text-blue-400 flex items-center justify-center font-bold text-xl font-mono shrink-0">
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 text-blue-700 flex items-center justify-center font-bold text-xl font-mono shrink-0 shadow-sm">
                 IX
             </div>
             <div>

@@ -22,10 +22,10 @@
     <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="max-w-3xl">
-                <a href="{{ route('services.index') }}" class="text-xs font-mono text-blue-400 hover:text-cyan-300 inline-flex items-center space-x-1 mb-4">
+                <a href="{{ route('services.index') }}" class="text-xs font-mono text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center space-x-1 mb-4">
                     <span>← All Services</span>
                 </a>
-                <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-cyan-400 text-xs font-mono uppercase tracking-widest font-semibold ml-3">
+                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono uppercase tracking-widest font-bold ml-3 shadow-sm">
                     {{ $service->category->name ?? 'Enterprise Service' }}
                 </div>
 

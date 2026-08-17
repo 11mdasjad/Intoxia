@@ -5,7 +5,7 @@
     {{-- Header --}}
     <section class="pt-32 pb-16 sm:pt-40 sm:pb-24 border-b border-slate-200 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center max-w-4xl mx-auto">
-            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono uppercase tracking-widest font-semibold mb-4">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono uppercase tracking-widest font-bold mb-4 shadow-sm">
                 Knowledge & R&D
             </div>
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -23,11 +23,11 @@
         <div class="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
             {{-- Category Pills --}}
             <div class="flex flex-wrap items-center gap-2">
-                <a href="{{ route('insights.index') }}" class="px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all {{ !$selectedCategory ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5' }}">
+                <a href="{{ route('insights.index') }}" class="px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all {{ !$selectedCategory ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-white text-slate-700 hover:text-blue-600 hover:bg-slate-50 border border-slate-200 shadow-sm' }}">
                     All Topics
                 </a>
                 @foreach($categories as $cat)
-                    <a href="{{ route('insights.index', ['category' => $cat->slug]) }}" class="px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all {{ $selectedCategory === $cat->slug ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 border border-white/5' }}">
+                    <a href="{{ route('insights.index', ['category' => $cat->slug]) }}" class="px-4 py-2 rounded-xl text-xs font-mono font-semibold transition-all {{ $selectedCategory === $cat->slug ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30' : 'bg-white text-slate-700 hover:text-blue-600 hover:bg-slate-50 border border-slate-200 shadow-sm' }}">
                         {{ $cat->name }}
                     </a>
                 @endforeach
@@ -59,7 +59,7 @@
                 <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-blue-500/30 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div class="lg:col-span-8 space-y-4">
                         <div class="flex items-center space-x-3">
-                            <span class="px-3 py-1 rounded-md text-xs font-mono font-bold bg-blue-600/20 text-cyan-400 border border-blue-500/30">
+                            <span class="px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold bg-blue-50 text-blue-700 border border-blue-200 shadow-sm">
                                 FEATURED ARTICLE
                             </span>
                             @if($featuredPost->category)
@@ -67,7 +67,7 @@
                             @endif
                         </div>
 
-                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight hover:text-blue-400 transition-colors">
+                        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight hover:text-blue-600 transition-colors">
                             <a href="{{ route('insights.show', $featuredPost->slug) }}">
                                 {{ $featuredPost->title }}
                             </a>

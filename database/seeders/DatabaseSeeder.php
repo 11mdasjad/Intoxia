@@ -86,16 +86,17 @@ class DatabaseSeeder extends Seeder
 
     private function seedAdminUser(): void
     {
-        $admin = User::create([
-            'name' => 'Intoxia Admin',
-            'email' => 'admin@intoxiatechnologies.com',
-            'password' => Hash::make('IntoxiaAdmin@2026'),
-            'email_verified_at' => now(),
-        ]);
+        $admin = User::firstOrNew(['email' => 'admin@intoxiatechnologies.com']);
+        $admin->name = 'Intoxia Admin';
+        $admin->password = 'IntoxiaAdmin@2026';
+        $admin->email_verified_at = now();
+        $admin->save();
 
         // Attach super_admin role
         $role = Role::where('name', 'super_admin')->first();
-        $admin->roles()->attach($role);
+        if ($role && !$admin->roles()->where('name', 'super_admin')->exists()) {
+            $admin->roles()->attach($role);
+        }
     }
 
     private function seedSiteSettings(): void

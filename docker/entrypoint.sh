@@ -21,6 +21,9 @@ if [ -n "$APP_KEY" ]; then
     echo "Running database migrations..."
     php artisan migrate --force --graceful || true
     
+    echo "Ensuring Admin user credentials exist..."
+    php artisan db:seed --class=AdminUserSeeder --force || true
+    
     echo "Caching Laravel configuration & routes..."
     php artisan config:cache || true
     php artisan route:cache || true
