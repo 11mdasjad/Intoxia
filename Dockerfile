@@ -46,7 +46,8 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
         zip \
         opcache \
         exif \
-        gd
+        gd \
+        pcntl
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -64,9 +65,9 @@ COPY . .
 # Copy compiled frontend assets from Stage 1 into public/build
 COPY --from=frontend /app/public/build /var/www/html/public/build
 
-# Install PHP dependencies without dev packages
+# Install PHP dependencies without dev packages and without running artisan scripts during build
 ENV COMPOSER_ALLOW_SUPERUSER=1
-RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress
+RUN composer install --no-dev --no-scripts --optimize-autoloader --no-interaction --no-progress
 
 # Configure Nginx & Supervisord
 COPY docker/nginx.conf /etc/nginx/http.d/default.conf

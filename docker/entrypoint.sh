@@ -12,11 +12,15 @@ if [ ! -f /var/www/html/database/database.sqlite ]; then
 fi
 
 # 3. Ensure permissions on storage and database
-chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
-chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database
+chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database /var/www/html/public
+chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/database /var/www/html/public
 chmod 664 /var/www/html/database/database.sqlite
 
-# 4. Run database migrations gracefully
+# 4. Discover packages & create storage symlink
+php artisan package:discover --ansi || true
+php artisan storage:link || true
+
+# 5. Run database migrations gracefully
 if [ -n "$APP_KEY" ]; then
     echo "Running database migrations..."
     php artisan migrate --force --graceful || true
