@@ -10,12 +10,15 @@ sed -i "s/listen [0-9]*;/listen $PORT;/g" /etc/nginx/http.d/default.conf 2>/dev/
 export APP_NAME="${APP_NAME:-Intoxia}"
 export APP_ENV="${APP_ENV:-production}"
 export APP_DEBUG="${APP_DEBUG:-false}"
+export APP_URL="${APP_URL:-https://intoxia.onrender.com}"
 export APP_KEY="${APP_KEY:-base64:adCre9IwcoAiTwZIXu5n4PC8fYQvaJq14k45RSbRb2s=}"
 export DB_CONNECTION="${DB_CONNECTION:-sqlite}"
 export DB_DATABASE="${DB_DATABASE:-/var/www/html/database/database.sqlite}"
 export SESSION_DRIVER="${SESSION_DRIVER:-file}"
 export CACHE_STORE="${CACHE_STORE:-file}"
 export QUEUE_CONNECTION="${QUEUE_CONNECTION:-sync}"
+export LOG_CHANNEL="${LOG_CHANNEL:-stack}"
+export LOG_STACK="${LOG_STACK:-single,stderr}"
 
 # 3. Ensure required storage directories and SQLite database exist
 mkdir -p /var/www/html/storage/framework/sessions \
