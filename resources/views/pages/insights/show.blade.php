@@ -57,12 +57,12 @@
     {{-- Main Article Content --}}
     <article class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         @if($post->excerpt)
-            <div class="p-6 sm:p-8 rounded-2xl bg-blue-950/20 border border-blue-500/20 text-slate-200 text-lg leading-relaxed font-medium mb-12">
+            <div class="p-6 sm:p-8 rounded-2xl bg-blue-50/60 border border-blue-200 text-slate-700 text-lg leading-relaxed font-medium mb-12">
                 {{ $post->excerpt }}
             </div>
         @endif
 
-        <div class="prose prose-invert prose-lg max-w-none text-slate-700 leading-relaxed">
+        <div class="prose prose-slate prose-lg max-w-none text-slate-700 leading-relaxed">
             {!! $post->body !!}
         </div>
 

@@ -41,7 +41,7 @@
                     <a href="{{ route('contact') }}" class="px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm shadow-xl shadow-blue-600/30">
                         Consult On {{ $service->name }}
                     </a>
-                    <a href="https://wa.me/917011639618?text={{ urlencode('Hello Intoxia Technologies, I want to discuss ' . $service->name) }}" target="_blank" rel="noopener noreferrer" class="px-6 py-4 rounded-xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/30 text-emerald-400 font-semibold text-sm">
+                    <a href="https://wa.me/917011639618?text={{ urlencode('Hello Intoxia Technologies, I want to discuss ' . $service->name) }}" target="_blank" rel="noopener noreferrer" class="px-6 py-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 text-emerald-700 font-semibold text-sm">
                         WhatsApp Fast-Track
                     </a>
                 </div>
@@ -55,21 +55,21 @@
             
             {{-- Main Text --}}
             <div class="lg:col-span-8 space-y-12">
-                <div class="prose prose-invert prose-lg max-w-none text-slate-700 leading-relaxed">
+                <div class="prose prose-slate prose-lg max-w-none text-slate-700 leading-relaxed">
                     {!! $service->description ?? '<p>' . $service->short_description . '</p>' !!}
                 </div>
 
                 {{-- Key Benefits --}}
                 @if($service->benefits && is_array($service->benefits))
-                    <div class="p-8 rounded-3xl bg-white border border-slate-200">
+                    <div class="p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
                         <h2 class="text-2xl font-bold text-slate-900 mb-6">Key Business & Technical Benefits</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             @foreach($service->benefits as $benefit)
                                 <div class="flex items-start space-x-3">
-                                    <div class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <div class="w-5 h-5 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 mt-0.5 border border-blue-100">
                                         <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     </div>
-                                    <span class="text-sm text-slate-200 font-medium">{{ $benefit }}</span>
+                                    <span class="text-sm text-slate-700 font-medium leading-normal">{{ $benefit }}</span>
                                 </div>
                             @endforeach
                         </div>
@@ -82,7 +82,7 @@
                         <h2 class="text-2xl font-bold text-slate-900 mb-4">Core Technology Stack</h2>
                         <div class="flex flex-wrap gap-2">
                             @foreach($service->technologies as $tech)
-                                <span class="px-3.5 py-1.5 rounded-lg bg-blue-950/40 border border-blue-500/30 text-cyan-300 font-mono text-xs font-semibold">
+                                <span class="px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs font-semibold">
                                     {{ $tech }}
                                 </span>
                             @endforeach

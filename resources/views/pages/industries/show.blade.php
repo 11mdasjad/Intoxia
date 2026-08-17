@@ -46,8 +46,8 @@
 
                 {{-- Intoxia Solution --}}
                 @if($industry->solution)
-                    <div class="p-8 rounded-3xl bg-blue-950/20 border border-blue-500/20">
-                        <div class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold mb-2">Intoxia Engineering Framework</div>
+                    <div class="p-8 rounded-3xl bg-blue-50/60 border border-blue-200">
+                        <div class="text-xs font-mono text-blue-600 uppercase tracking-widest font-bold mb-2">Intoxia Engineering Framework</div>
                         <h2 class="text-2xl font-bold text-slate-900 mb-3">Our Engineering Solution</h2>
                         <p class="text-slate-700 text-base leading-relaxed">
                             {{ $industry->solution }}

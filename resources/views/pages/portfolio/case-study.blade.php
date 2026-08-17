@@ -82,7 +82,7 @@
                         @endif
 
                         @if($caseStudy->architecture)
-                            <div class="prose prose-invert max-w-none text-slate-700 leading-relaxed">
+                            <div class="prose prose-slate max-w-none text-slate-700 leading-relaxed">
                                 {!! $caseStudy->architecture !!}
                             </div>
                         @endif
@@ -92,7 +92,7 @@
                                 <div class="text-xs font-mono text-slate-600 uppercase tracking-wider mb-3">Technologies Leveraged:</div>
                                 <div class="flex flex-wrap gap-2">
                                     @foreach($caseStudy->technologies_used as $tech)
-                                        <span class="px-3.5 py-1.5 rounded-lg bg-blue-950/50 border border-blue-500/30 text-cyan-300 text-xs font-mono font-semibold">
+                                        <span class="px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-xs font-mono font-semibold">
                                             {{ $tech }}
                                         </span>
                                     @endforeach
@@ -105,13 +105,13 @@
                 {{-- Results & Business Impact --}}
                 @if($caseStudy->results && is_array($caseStudy->results))
                     <div id="results" class="scroll-mt-28 space-y-6 border-t border-slate-200 pt-12">
-                        <div class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-widest">04 — Commercial Impact</div>
+                        <div class="text-xs font-mono text-emerald-600 font-bold uppercase tracking-widest">04 — Commercial Impact</div>
                         <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Results Achieved</h2>
                         
                         <div class="grid grid-cols-1 gap-4">
                             @foreach($caseStudy->results as $result)
-                                <div class="p-5 rounded-2xl bg-emerald-950/20 border border-emerald-500/20 flex items-center space-x-3 text-slate-200 text-sm">
-                                    <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <div class="p-5 rounded-2xl bg-emerald-50/80 border border-emerald-200 flex items-center space-x-3 text-slate-700 text-sm">
+                                    <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                                     <span class="font-medium">{{ $result }}</span>
                                 </div>
                             @endforeach
@@ -121,12 +121,12 @@
 
                 {{-- Client Testimonial if present --}}
                 @if($caseStudy->testimonial_quote)
-                    <div class="p-8 rounded-3xl bg-blue-950/30 border border-blue-500/20 relative">
-                        <div class="text-4xl text-blue-400 font-serif leading-none mb-3">“</div>
-                        <p class="text-base text-slate-200 italic leading-relaxed">
+                    <div class="p-8 rounded-3xl bg-blue-50/60 border border-blue-200 relative">
+                        <div class="text-4xl text-blue-500 font-serif leading-none mb-3">“</div>
+                        <p class="text-base text-slate-700 italic leading-relaxed">
                             {{ $caseStudy->testimonial_quote }}
                         </p>
-                        <div class="mt-4 pt-4 border-t border-slate-200 text-xs font-mono text-slate-600">
+                        <div class="mt-4 pt-4 border-t border-blue-200/60 text-xs font-mono text-slate-600">
                             <strong>{{ $caseStudy->testimonial_name }}</strong> &bull; {{ $caseStudy->testimonial_role }}
                         </div>
                     </div>
