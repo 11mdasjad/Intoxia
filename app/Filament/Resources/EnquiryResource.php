@@ -17,9 +17,9 @@ class EnquiryResource extends Resource
 {
     protected static ?string $model = Enquiry::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-inbox';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-envelope';
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Lead Management';
+    protected static string | \UnitEnum | null $navigationGroup = 'Leads & Inquiries';
 
     protected static ?int $navigationSort = 1;
 

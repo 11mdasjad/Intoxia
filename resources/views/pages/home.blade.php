@@ -176,18 +176,38 @@
 
                 <div class="grid grid-cols-2 gap-4 pt-4">
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-9 h-9 rounded-xl bg-cyan-50 border border-cyan-200 text-cyan-600 flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
                         <div class="text-cyan-600 font-mono text-sm font-bold">01. AI-Driven</div>
                         <p class="text-xs text-slate-500 mt-1">Autonomous workflows & intelligent agents embedded into your product stack.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
                         <div class="text-blue-600 font-mono text-sm font-bold">02. Research-Led</div>
                         <p class="text-xs text-slate-500 mt-1">Deep operational analysis before a single line of production code is written.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-9 h-9 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                            </svg>
+                        </div>
                         <div class="text-indigo-600 font-mono text-sm font-bold">03. Engineering-First</div>
                         <p class="text-xs text-slate-500 mt-1">High-throughput, clean architecture designed for multi-year scalability.</p>
                     </div>
                     <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-9 h-9 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
                         <div class="text-emerald-600 font-mono text-sm font-bold">04. Client-First</div>
                         <p class="text-xs text-slate-500 mt-1">Transparent timelines, direct engineer communication, and clear deliverables.</p>
                     </div>
@@ -252,9 +272,7 @@
                         <div>
                             <div class="flex items-center justify-between mb-6">
                                 <div class="w-12 h-12 rounded-2xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-600 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                    </svg>
+                                    <x-service-icon :icon="$service->icon" :name="$service->name" class="w-6 h-6" />
                                 </div>
                                 @if($service->category)
                                     <span class="text-[11px] font-mono font-bold px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600">
@@ -333,17 +351,29 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-6 border-t border-white/10">
                 <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-400/20 flex items-center justify-center text-cyan-300 mb-4 font-mono font-bold">01</div>
+                    <div class="w-10 h-10 rounded-xl bg-cyan-400/20 border border-cyan-400/30 flex items-center justify-center text-cyan-300 mb-4">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                        </svg>
+                    </div>
                     <h3 class="text-lg font-bold text-white font-['Outfit']">Generative AI & LLMs</h3>
                     <p class="text-xs text-slate-300 mt-2 leading-relaxed">Enterprise OpenAI, Claude, and Llama 3 custom integrations with prompt guardrails.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-400/20 flex items-center justify-center text-cyan-300 mb-4 font-mono font-bold">02</div>
+                    <div class="w-10 h-10 rounded-xl bg-indigo-400/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300 mb-4">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h.01M15 9h.01M9 5h6"/>
+                        </svg>
+                    </div>
                     <h3 class="text-lg font-bold text-white font-['Outfit']">Autonomous AI Agents</h3>
                     <p class="text-xs text-slate-300 mt-2 leading-relaxed">Multi-agent systems executing automated research, task routing, and data processing.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-cyan-400/20 flex items-center justify-center text-cyan-300 mb-4 font-mono font-bold">03</div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-400/20 border border-teal-400/30 flex items-center justify-center text-teal-300 mb-4">
+                        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                    </div>
                     <h3 class="text-lg font-bold text-white font-['Outfit']">Vector RAG Knowledge</h3>
                     <p class="text-xs text-slate-300 mt-2 leading-relaxed">Pinecone, ChromaDB, and pgvector embeddings over your proprietary company files.</p>
                 </div>
@@ -366,9 +396,7 @@
                     <div class="light-glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group">
                         <div>
                             <div class="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm">
-                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                                </svg>
+                                <x-industry-icon :icon="$industry->icon" :name="$industry->name" class="w-6 h-6" />
                             </div>
 
                             <h3 class="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors tracking-tight font-['Outfit']">
@@ -410,6 +438,11 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
                 <div class="text-xs font-mono text-blue-600 font-bold tracking-widest uppercase">01 — Business-First Thinking</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Code that drives unit economics</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -418,7 +451,12 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
-                <div class="text-xs font-mono text-blue-600 font-bold tracking-widest uppercase">02 — Modern Clean Engineering</div>
+                <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-200 text-cyan-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                </div>
+                <div class="text-xs font-mono text-cyan-600 font-bold tracking-widest uppercase">02 — Modern Clean Engineering</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Maintainable, clean architecture</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     We adhere to SOLID principles, strict typing, automated test coverage, and modular codebases so your team can easily extend the project.
@@ -426,6 +464,11 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                    </svg>
+                </div>
                 <div class="text-xs font-mono text-indigo-600 font-bold tracking-widest uppercase">03 — AI-Ready Architecture</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Built for autonomous intelligence</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -434,6 +477,11 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z"/>
+                    </svg>
+                </div>
                 <div class="text-xs font-mono text-emerald-600 font-bold tracking-widest uppercase">04 — Scalable Infrastructure</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">Built for millions of requests</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -442,6 +490,11 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 text-amber-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                </div>
                 <div class="text-xs font-mono text-amber-600 font-bold tracking-widest uppercase">05 — Transparent Communication</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">No middleman delays</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">
@@ -450,6 +503,11 @@
             </div>
 
             <div class="light-glass-card rounded-3xl p-8 space-y-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-50 border border-purple-200 text-purple-600 flex items-center justify-center">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                </div>
                 <div class="text-xs font-mono text-purple-600 font-bold tracking-widest uppercase">06 — Long-Term Support</div>
                 <h3 class="text-xl font-bold text-slate-900 font-['Outfit']">We stand behind our code</h3>
                 <p class="text-sm text-slate-600 leading-relaxed">

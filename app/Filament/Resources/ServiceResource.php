@@ -16,7 +16,7 @@ use Filament\Tables\Table;
 class ServiceResource extends Resource
 {
     protected static ?string $model = Service::class;
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-wrench-screwdriver';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-squares-plus';
     protected static string | \UnitEnum | null $navigationGroup = 'Content';
     protected static ?int $navigationSort = 1;
 

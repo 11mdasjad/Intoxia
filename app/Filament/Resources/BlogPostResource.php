@@ -17,7 +17,7 @@ use Filament\Tables\Table;
 class BlogPostResource extends Resource
 {
     protected static ?string $model = BlogPost::class;
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-document-text';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-newspaper';
     protected static string | \UnitEnum | null $navigationGroup = 'Content';
     protected static ?int $navigationSort = 3;
     protected static ?string $navigationLabel = 'Insights & Blog';
